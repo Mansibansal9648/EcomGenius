@@ -1,4 +1,4 @@
-package com.eComGenius.demo;
+package com.eCom.eComGenius;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
