@@ -1,6 +1,6 @@
 package com.eCom.eComGenius.Controller;
 
-import com.eCom.eComGenius.Dto.UserRequest;
+import com.eCom.eComGenius.DTO.UserRequest;
 import com.eCom.eComGenius.Entity.User;
 import com.eCom.eComGenius.Service.UserService;
 import jakarta.validation.Valid;
@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @PostMapping("/user/create-user")
-    public ResponseEntity<User> createEmployee(@RequestBody @Valid UserRequest userRequest){
+    public ResponseEntity<User> createUser(@RequestBody @Valid UserRequest userRequest){
         User createdUser=userService.createNewUser(userRequest);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdUser);
     }

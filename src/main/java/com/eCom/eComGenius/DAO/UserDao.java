@@ -1,4 +1,4 @@
-package com.eCom.eComGenius.Dao;
+package com.eCom.eComGenius.DAO;
 
 import com.eCom.eComGenius.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

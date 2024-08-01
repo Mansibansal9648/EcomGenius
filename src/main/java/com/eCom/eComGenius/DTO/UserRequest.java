@@ -1,7 +1,6 @@
-package com.eCom.eComGenius.Dto;
+package com.eCom.eComGenius.DTO;
 
 import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
@@ -23,7 +22,7 @@ public class UserRequest {
 
     @NotEmpty(message = "Date of birth is required field")
     @Pattern(regexp = "^\\d{4}-\\d{2}-\\d{2}$",message = "Date of birth must be in the format yyyy-mm-dd")
-    private String date_of_birth;
+    private String dateOfBirth;
 
     @NotEmpty(message = "Gender is required field")
     private String gender;

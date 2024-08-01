@@ -1,15 +1,15 @@
 package com.eCom.eComGenius.Entity;
 
-import com.eCom.eComGenius.Dto.UserRequest;
+import com.eCom.eComGenius.DTO.UserRequest;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @Table(name = "users")
 public class User {
     @Id
@@ -17,19 +17,10 @@ public class User {
     private long id;
     private String name;
     private String email;
-    private String date_of_birth;
+    private String dateOfBirth;
     private String gender;
     private String phone;
     private String address;
     private String password;
 
-    public User(UserRequest userRequest) {
-        this.name=userRequest.getName();
-        this.email=userRequest.getEmail();
-        this.date_of_birth=userRequest.getDate_of_birth();
-        this.gender=userRequest.getGender();
-        this.phone=userRequest.getPhone();
-        this.address=userRequest.getAddress();
-        this.password=userRequest.getPassword();
-    }
 }
