@@ -22,6 +22,21 @@ public class UserServiceImpl implements UserService{
         user.setAddress(userRequest.getAddress());
         user.setPassword(userRequest.getPassword());
 
+        boolean isEmail= userDao.existsByEmail(user.getEmail());
+        boolean isPhone=userDao.existsByPhone(user.getPhone());
+
+        if(isEmail && isPhone){
+            throw new IllegalArgumentException("Email and Phone no already exists");
+        }
+
+        if(isEmail){
+            throw new IllegalArgumentException("Email already exists");
+        }
+
+        if(isPhone){
+            throw new IllegalArgumentException("Phone no already exists");
+        }
+
         return userDao.save(user);
     }
 }
