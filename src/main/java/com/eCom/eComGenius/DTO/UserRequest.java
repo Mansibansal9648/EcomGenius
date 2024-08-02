@@ -1,5 +1,6 @@
 package com.eCom.eComGenius.DTO;
 
+import com.eCom.eComGenius.CustomValidation.ValidateGender;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
@@ -25,6 +26,7 @@ public class UserRequest {
     private String dateOfBirth;
 
     @NotEmpty(message = "Gender is required field")
+    @ValidateGender(message = "Gender must be either male or female")
     private String gender;
 
     @NotEmpty(message = "Phone No. is required field")
